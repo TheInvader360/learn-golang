@@ -1,1 +1,1 @@
-go run main.go A B
+* go run main.go A B
