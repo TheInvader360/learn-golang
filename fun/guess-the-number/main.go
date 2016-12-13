@@ -11,12 +11,12 @@ import (
 
 var active = true
 var rng = rand.New(rand.NewSource(time.Now().UnixNano()))
-var minValid = 1
-var maxValid = 5
+var minValid = 10
+var maxValid = 15
 
 func main() {
 	for active {
-		var randomNumber = rng.Intn(maxValid) + minValid
+		var randomNumber = rng.Intn(maxValid-minValid+1) + minValid
 		fmt.Println("Guess the number I'm thinking of (" + strconv.Itoa(minValid) + "-" + strconv.Itoa(maxValid) + ")")
 		var playerNumber int
 		_, err := fmt.Scanf("%d", &playerNumber)
